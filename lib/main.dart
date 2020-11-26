@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:state/screens/alert_screen.dart';
 import 'package:state/screens/date_screen.dart';
 
 void main() {
@@ -33,14 +34,8 @@ class MyHomePage extends StatelessWidget {
             title: Text("State"),
             bottom: TabBar(
               tabs: [
-                Tab(
-                  text: "Date",
-                  icon: Icon(Icons.calendar_today),
-                ),
-                Tab(
-                  text: "Alert",
-                  icon: Icon(Icons.warning),
-                ),
+                DateScreen.buildTab(),
+                AlertScreen.buildTab(),
                 Tab(
                   text: "Switch",
                   icon: Icon(Icons.touch_app),
@@ -55,7 +50,7 @@ class MyHomePage extends StatelessWidget {
           body: TabBarView(
             children: [
               DateScreen(),
-              DateScreen(),
+              AlertScreen(),
               DateScreen(),
               DateScreen(),
             ],
