@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AlertScreen extends StatelessWidget {
-  static Widget buildTab() {
+  static Tab buildTab() {
     return Tab(
       text: "Alert",
       icon: Icon(Icons.warning),
@@ -16,7 +15,10 @@ class AlertScreen extends StatelessWidget {
           "This is the content of the widget. If you are reading this, it means I successfully achieved this part of the PAC ;)."),
       actions: [
         MaterialButton(
-          child: Text("Yes :)"),
+          child: Text(
+            "Yes :)",
+            style: TextStyle(color: Colors.blueGrey[700]),
+          ),
           onPressed: () => {Navigator.of(context).pop()},
         )
       ],
