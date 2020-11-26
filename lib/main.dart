@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:state/screens/alert_screen.dart';
 import 'package:state/screens/date_screen.dart';
+import 'package:state/screens/slider_screen.dart';
 import 'package:state/screens/switch_screen.dart';
 
 void main() {
@@ -38,10 +39,7 @@ class MyHomePage extends StatelessWidget {
                 DateScreen.buildTab(),
                 AlertScreen.buildTab(),
                 SwitchScreen.buildTab(),
-                Tab(
-                  text: "Slider",
-                  icon: Icon(Icons.touch_app),
-                )
+                SliderScreen.buildTab()
               ],
             ),
           ),
@@ -50,7 +48,7 @@ class MyHomePage extends StatelessWidget {
               DateScreen(),
               AlertScreen(),
               SwitchScreen(),
-              DateScreen(),
+              SliderScreen(),
             ],
           )),
     );
