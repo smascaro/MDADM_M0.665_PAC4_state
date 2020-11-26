@@ -1,14 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:state/util/DateTimeFormatter.dart';
 
 class DateScreen extends StatefulWidget {
-  static Tab buildTab(){
+  static Tab buildTab() {
     return Tab(
       text: "Date",
       icon: Icon(Icons.calendar_today),
     );
   }
+
   @override
   _DateScreenState createState() => _DateScreenState();
 }
@@ -29,10 +29,7 @@ class _DateScreenState extends State<DateScreen> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        buildDateText(),
-        buildUpdateButton()
-      ],
+      children: [buildDateText(), buildUpdateButton()],
     );
   }
 
@@ -49,8 +46,8 @@ class _DateScreenState extends State<DateScreen> {
 
   RaisedButton buildUpdateButton() {
     return RaisedButton(
-        child: Text("Update date"),
-        onPressed: _updateDate,
-      );
+      child: Text("Update date"),
+      onPressed: _updateDate,
+    );
   }
 }
