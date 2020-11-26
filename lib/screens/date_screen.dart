@@ -3,6 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:state/util/DateTimeFormatter.dart';
 
 class DateScreen extends StatefulWidget {
+  static Widget buildTab(){
+    return Tab(
+      text: "Date",
+      icon: Icon(Icons.calendar_today),
+    );
+  }
   @override
   _DateScreenState createState() => _DateScreenState();
 }
